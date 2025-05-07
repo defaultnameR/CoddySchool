@@ -1,0 +1,193 @@
+:root {
+    --main-color: #333333;
+    --accent-color: #ff6c29;
+    --light-bg: #e7ebfa;
+    --hover-accent: #ffd900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Comfortaa', cursive;
+    background-color: var(--light-bg);
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--main-color);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    color: var(--hover-accent);
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header-menu {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background: var(--main-color);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    left: 0;
+    top: 30px;
+}
+
+.header-menu:hover .menu-content {
+    display: block;
+}
+
+.menu-content a {
+    color: var(--hover-accent);
+    text-decoration: none;
+    display: block;
+    margin: 8px 0;
+    font-family: 'Comfortaa';
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.menu-content a:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.container {
+    flex: 1;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.course-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    width: 300px;
+    text-align: center;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.course-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h2 {
+    color: var(--accent-color);
+    text-align: center;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: var(--main-color);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.vk-icon {
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
+}
+
+
+.vk-icon:hover {
+    transform: scale(1.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px, -50%); }
+    to { opacity: 1; transform: translateY(0, 50%); }
+}
+
+.animation-fade {
+    animation: fadeIn 1s ease-out;
+}
+
+.made-by-kids {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    color: var(--hover-accent);
+    font-size: 0.9em;
+    font-style: italic;
+    opacity: 0.8;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+footer {
+    position: relative; 
+    padding-bottom: 30px; 
+}
+
+.signup-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+}
+
+.signup-button:hover {
+    background: var(--hover-accent);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    color: var(--main-color);
+}
